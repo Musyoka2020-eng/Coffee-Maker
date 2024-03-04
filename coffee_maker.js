@@ -110,5 +110,29 @@ class CoffeeMaker {
     }
 }
 
-let coffeeMaker = new CoffeeMaker();
-coffeeMaker.brew();
+class DripCoffeeMaker extends CoffeeMaker {
+    constructor() {
+        super();
+        this.brewingMethod = 'Drip';
+    }
+}
+
+class EspressoMachine extends CoffeeMaker {
+    constructor() {
+        super();
+        this.brewingMethod = 'Espresso';
+    }
+}
+
+class FrenchPress extends CoffeeMaker {
+    constructor() {
+        super();
+        this.brewingMethod = 'French Press';
+    }
+}
+
+let dripCoffeeMaker = new DripCoffeeMaker();
+dripCoffeeMaker.brew();
+
+// let coffeeMaker = new CoffeeMaker();
+// coffeeMaker.brew();
